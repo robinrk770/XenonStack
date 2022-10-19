@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Login</title>
+        <style>
+            div.div1{
+                margin: auto;
+                margin-top: 200px;
+                width: 20%;
+                text-align: center;
+                justify-content: center;
+                padding-top: 10;
+                padding: 1px;
+            }
+        </style>
+        <script>
+            function checkLogin()
+            {
+                var name=document.getElementById('name').value;
+                var password=document.getElementById('password').value;
+                if(name=='Robin Garg' && password=="RobinGarg@16626")
+                    return true;
+                else    {
+                    alert("Wrong Id or wrong password");
+                    return false;        
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="div1">
+            <form method="post" action="main.html" onsubmit="return checkLogin()">
+                <input type="text" name="name" id="name" required><br><br>
+                <input type="text" name="password" id="password"><br><br>
+                <input type="submit">
+            </form>
+            <a href="profile.html">Create a account</a>
+        </div>
+        
+    </body>
+</html>
